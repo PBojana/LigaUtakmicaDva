@@ -1,5 +1,7 @@
 package LigaUtakmicaDva.LigaUtakmicaDva;
+
  
+
 
 import org.junit.Before;
 import org.junit.Test; 
@@ -9,7 +11,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-
 
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -26,7 +27,7 @@ import javax.mail.PasswordAuthentication;
  
 
 
-public class LigaUtakmicaTri  {
+public class LigaUtakmicaEden  {
 
 
 	public WebDriver driver;
@@ -49,7 +50,7 @@ public class LigaUtakmicaTri  {
 	@Test
 	public void test() throws InterruptedException { 
 	
-		File file = new File("C:/temp/bet356_Tri.properties");
+		File file = new File("C:/temp/bet356_Eden.properties");
 		 
     	FileInputStream fileInput = null;
 		try {
@@ -101,18 +102,17 @@ public class LigaUtakmicaTri  {
 	    	{
 	    		driver.findElement(By.xpath("//div[2]/div/div/div/div[2]/div/div[2]")).click();
 	    		Thread.sleep(1000);
-	    		
-	    	    			if (driver.findElements(By.cssSelector("span.gl-ParticipantCentered_Handicap")).size()!=0)
+
+	    			if (driver.findElements(By.cssSelector("span.gl-ParticipantCentered_Handicap")).size()!=0)
 	    				{
-	    				String AssianHand= driver.findElement(By.cssSelector("span.gl-ParticipantCentered_Handicap")).getText();
-	   	    		 
-	   	    		 System.out.println("AssianHand" +AssianHand+"kraj");
-	   	    		 
-	   	    		 String AssianOdds= driver.findElement(By.cssSelector("span.gl-ParticipantCentered_Odds")).getText();
-	   	    		  
-	   	    		 System.out.println("AssianOdds" +AssianOdds+"kraj");
-	   	    		
-	   	    		 
+	    				 String AssianHand= driver.findElement(By.cssSelector("span.gl-ParticipantCentered_Handicap")).getText();
+	    	    		 
+	    	    		 System.out.println("AssianHand" +AssianHand+"kraj");
+	    	    		 
+	    	    		 String AssianOdds= driver.findElement(By.cssSelector("span.gl-ParticipantCentered_Odds")).getText();
+	    	    		  
+	    	    		 System.out.println("AssianOdds" +AssianOdds+"kraj");
+	    	    		 
 	    				 if (!(AssianHand.trim().isEmpty())){
 	    					if (!(AssianOdds.trim().isEmpty()))
 	    						{	
@@ -122,7 +122,7 @@ public class LigaUtakmicaTri  {
 	    	 
 	        final String username = "jenkinss4e@gmail.com";
 	        final String password = "Passwords4e";
-	        String to = "tomi.pocevski@gmail.com";
+	        String to = "";//"tomi.pocevski@gmail.com";
 	        		
 	        Properties props = new Properties();
 	        props.put("mail.smtp.auth", "true");
@@ -163,5 +163,4 @@ public class LigaUtakmicaTri  {
 	    	}
 	}
 	}     
-
 
